@@ -9,6 +9,7 @@
     --cream: #FCF9ED;
     --darkblue: #252E33;
     --lightblue: #5D737E;
+    --transition: all .3s ease-in-out;
 }
 
 img{
@@ -41,6 +42,11 @@ th, td{
 
 th{
     padding: 15px 20px;
+    cursor: pointer;
+}
+
+th:hover{
+    background-color: var(--darkblue);
 }
 
 .table-header{
@@ -63,7 +69,6 @@ th{
 .edit-menu{
     display: flex;
     flex-direction: column;
-    gap: 30px;
 
     position: absolute;
     right: -199px;
@@ -71,12 +76,71 @@ th{
     height: 100vh;
     padding: 20px;
     background-color: white;
+    transition: all .5s ease-in-out;
+    z-index: 2;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.edit-menu input{
+    border: 1px solid var(--lightblue);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 30px;
+    margin-top: 5px;
+}
+
+.edit-menu label{
+    font-weight: bold;
 }
 
 .show{
     transform: translateX(-199px);
 }
 
-textarea{
+.edit-menu textarea{
     resize: none;
+    padding: 10px;
+}
+
+.edit-menu button{
+    margin-top: 30px;
+    padding-block: 10px;
+    border: none;
+    background-color: var(--lightblue);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.edit-menu button:hover{
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), -2px -2px 5px rgba(255, 255, 255, 0.7);
+    background-color: #4a5a63;
+}
+
+.dark{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+    transition: var(--transition);
+}
+
+.show-dark{
+    pointer-events: all;
+    opacity: .5;
+    transition: var(--transition);
+}
+
+#search{
+    display: block;
+    margin-inline: auto;
+    margin-top: 30px;
 }
