@@ -43,6 +43,11 @@ th, td{
 th{
     padding: 15px 20px;
     cursor: pointer;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 th:hover{
