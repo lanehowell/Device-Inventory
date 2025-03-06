@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>Device Inventory</title>
+</head>
+<body>
+    <main>
+        <section class="content-wrapper">
+            <table class="table sortable" id="main-table"></table>
+        </section>
+        <div class="edit-menu" id="edit-menu">
+            <label for="name">Device Name</label>
+            <input id="name" type="text">
+            <label for="location">Location (Unit)</label>
+            <input id="location" type="text">
+            <label for="model">Device Model</label>
+            <input id="model" type="text">
+            <label for="notes">Notes</label>
+            <textarea name="notes" id="notes"></textarea>
+            <button id="confirm-edit">Confirm</button>
+            <button id="delete-btn">Delete</button>
+        </div>
+    </main>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
